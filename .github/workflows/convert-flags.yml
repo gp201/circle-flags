@@ -4,9 +4,6 @@ on:
   push:
     paths:
       - 'flags/**/*.svg'
-  pull_request:
-    paths:
-      - 'flags/**/*.svg'
   workflow_dispatch:
 
 jobs:
