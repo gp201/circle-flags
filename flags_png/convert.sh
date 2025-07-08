@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export_dims=16
+
 # Simple script to convert SVG flags to PNG using Inkscape
 echo "Converting SVG flags to PNG..."
 
@@ -10,7 +12,7 @@ for svg_file in ../flags/*.svg; do
         png_filename="${filename%.svg}.png"
         
         echo "Converting $filename..."
-        inkscape "$svg_file" --export-type=png --export-filename="$png_filename" --export-width=512 --export-height=512 --export-background-opacity=0 2>/dev/null
+        inkscape "$svg_file" --export-type=png --export-filename="$png_filename" --export-width=$export_dims --export-height=$export_dims --export-background-opacity=0 2>/dev/null
         echo "✓ Created $png_filename"
     fi
 done
@@ -27,7 +29,7 @@ for subdir in ../flags/*/; do
                 png_filename="${filename%.svg}.png"
                 
                 echo "Converting $dirname/$filename..."
-                inkscape "$svg_file" --export-type=png --export-filename="$dirname/$png_filename" --export-width=512 --export-height=512 --export-background-opacity=0 2>/dev/null
+                inkscape "$svg_file" --export-type=png --export-filename="$dirname/$png_filename" --export-width=$export_dims --export-height=$export_dims --export-background-opacity=0 2>/dev/null
                 echo "✓ Created $dirname/$png_filename"
             fi
         done
