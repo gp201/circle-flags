@@ -7,6 +7,7 @@ on:
   pull_request:
     paths:
       - 'flags/**/*.svg'
+  workflow_dispatch:
 
 jobs:
   convert-flags:
