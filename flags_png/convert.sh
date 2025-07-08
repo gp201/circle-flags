@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export_dims=16
+export_dims=512
 
 # Simple script to convert SVG flags to PNG using Inkscape
 echo "Converting SVG flags to PNG..."
