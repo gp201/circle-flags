@@ -20,8 +20,8 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y inkscape
 
       - name: Convert SVG to PNG
+        working-directory: flags_png
         run: |
-          cd flags_png
           chmod +x convert.sh
           ./convert.sh
 
