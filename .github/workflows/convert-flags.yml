@@ -21,8 +21,9 @@ jobs:
 
       - name: Convert SVG to PNG
         run: |
-          chmod +x flags_png/convert.sh
-          ./flags_png/convert.sh
+          cd flags_png
+          chmod +x convert.sh
+          ./convert.sh
 
       - name: Commit and push changes
         run: |
