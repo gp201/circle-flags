@@ -32,7 +32,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
 
           # Add and commit changes
-          git add flags_png/**/*.png
+          git add flags_png/*
           git commit -m "chore: Auto-convert SVG flags to PNG" || echo "No changes to commit"
       - name: Push changes
         run: |
